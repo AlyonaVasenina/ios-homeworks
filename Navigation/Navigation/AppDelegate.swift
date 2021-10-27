@@ -12,20 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private lazy var tabBarController: UITabBarController = {
         let result = UITabBarController()
-        result.viewControllers = [FeedNavVC(), profileNavVC]
+        result.viewControllers = [FeedNavVC(), ProfileNavVC()]
         return result
-    }()
-    
-    private lazy var profileNavVC: UINavigationController = {
-        let profile = UINavigationController(rootViewController: profileVC)
-        profile.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
-        return profile
-    }()
-    
-    private lazy var profileVC: UIViewController = {
-        let profile = UIViewController()
-        profile.title = "Profile"
-        return profile
     }()
     
     var window: UIWindow?
