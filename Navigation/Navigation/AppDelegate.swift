@@ -12,26 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private lazy var tabBarController: UITabBarController = {
         let result = UITabBarController()
-        result.viewControllers = [feedNavVC, profileNavVC]
+        result.viewControllers = [FeedNavVC(), profileNavVC]
         return result
-    }()
-    
-    private lazy var feedNavVC: UINavigationController = {
-        let feed = UINavigationController(rootViewController: feedVC)
-        feed.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "house"), tag: 0)
-        return feed
     }()
     
     private lazy var profileNavVC: UINavigationController = {
         let profile = UINavigationController(rootViewController: profileVC)
         profile.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         return profile
-    }()
-    
-    private lazy var feedVC: UIViewController = {
-        let feed = UIViewController()
-        feed.title = "Home"
-        return feed
     }()
     
     private lazy var profileVC: UIViewController = {
