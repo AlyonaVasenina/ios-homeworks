@@ -11,6 +11,7 @@ class ProfileNavVC: UINavigationController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        viewControllers = [ProfileVC()]
         tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
     }
     
@@ -18,9 +19,5 @@ class ProfileNavVC: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var profileVC: UIViewController = {
-        let profile = UIViewController()
-        profile.title = "Profile"
-        return profile
-    }()
+    
 }

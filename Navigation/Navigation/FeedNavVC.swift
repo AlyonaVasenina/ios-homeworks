@@ -11,7 +11,7 @@ class FeedNavVC: UINavigationController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        viewControllers = [feedVC]
+        viewControllers = [FeedVC()]
         tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "house"), tag: 0)
     }
     
@@ -19,9 +19,4 @@ class FeedNavVC: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var feedVC: UIViewController = {
-        let feed = UIViewController()
-        feed.title = "Home"
-        return feed
-    }()
 }
