@@ -24,6 +24,11 @@ class InfoVC: UIViewController {
     }()
     
     @objc func didTapAlert() {
-        print("test")
+        let alertVC = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: { _ in print("Ok") })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in print("Cancel") })
+        alertVC.addAction(ok)
+        alertVC.addAction(cancel)
+        present(alertVC, animated: true)
     }
 }
