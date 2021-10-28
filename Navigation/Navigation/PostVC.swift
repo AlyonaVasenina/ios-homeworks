@@ -9,9 +9,12 @@ import UIKit
 
 class PostVC: UIViewController {
     
-    init() {
+    let post: Post
+    
+    init(post: Post) {
+        self.post = post
         super.init(nibName: nil, bundle: nil)
-        title = "Post"
+        title = post.title
         view.backgroundColor = .red
     }
     

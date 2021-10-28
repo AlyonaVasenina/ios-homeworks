@@ -32,7 +32,7 @@ class FeedVC: UIViewController {
     }()
     
     @objc func didTapPost() {
-        let postVC = PostVC()
+        let postVC = PostVC(post: Post(title: "Post test"))
         navigationController!.pushViewController(postVC, animated: true)
     }
         
