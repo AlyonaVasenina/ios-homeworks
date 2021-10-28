@@ -15,10 +15,16 @@ class PostVC: UIViewController {
         self.post = post
         super.init(nibName: nil, bundle: nil)
         title = post.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTabInfo))
         view.backgroundColor = .red
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func didTabInfo() {
+        let infoVC = InfoVC()
+        present(infoVC, animated: true)
     }
 }
