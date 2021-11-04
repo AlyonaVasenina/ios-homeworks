@@ -9,11 +9,26 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    let ProfileHV = ProfileHeaderView()
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        title = "Profile"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let profileHV = ProfileHeaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
-        title = "Profile"
+        view.addSubview(profileHV)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        profileHV.frame = view.frame
+        view.backgroundColor = .orange
     }
 }
