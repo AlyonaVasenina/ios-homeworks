@@ -28,7 +28,6 @@ class ProfileViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        profileHV.frame = view.frame
-        view.backgroundColor = .orange
+        profileHV.frame = view.safeAreaLayoutGuide.layoutFrame
     }
 }
