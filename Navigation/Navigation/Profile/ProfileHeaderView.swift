@@ -14,6 +14,7 @@ class ProfileHeaderView: UIView {
         addSubview(avatarView)
         addSubview(nameLabel)
         addSubview(statusLabel)
+        addSubview(statusButton)
     }
     
     required init?(coder: NSCoder) {
@@ -38,19 +39,37 @@ class ProfileHeaderView: UIView {
         return label
     }()
     
-    let statusLabel: UITextField = {
-        var label = UITextField()
-        label.backgroundColor = .blue
+    let statusLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Waiting for something..."
         label.font = .systemFont(ofSize: 14, weight: .regular)
         label.textColor = .gray
         return label
     }()
     
+    lazy var statusButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 4
+        button.setTitle("Show status", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.7
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func buttonPressed(){
+        print(statusLabel.text!)
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        avatarView.frame = CGRect(x: 16, y: 16, width: 70, height: 70)
-        nameLabel.frame = CGRect(x: 102, y: 27, width: bounds.width - 16*3 - 70, height: 22)
-        statusLabel.frame = CGRect(x: 102, y: 53, width: bounds.width - 16*3 - 70, height: 18)
+        avatarView.frame = CGRect(x: 16, y: 16, width: 80, height: 80)
+        nameLabel.frame = CGRect(x: 112, y: 27, width: bounds.width - 16*3 - 80, height: 22)
+        statusLabel.frame = CGRect(x: 112, y: 58, width: bounds.width - 16*3 - 80, height: 18)
+        statusButton.frame = CGRect(x: 16, y: avatarView.frame.maxY + 16, width: bounds.width - 16*2, height: 50)
     }
 }
