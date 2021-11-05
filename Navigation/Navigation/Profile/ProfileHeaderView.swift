@@ -11,18 +11,18 @@ class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(avatarView)
-        addSubview(nameLabel)
+        addSubview(avatarImageView)
+        addSubview(fullNameLabel)
         addSubview(statusLabel)
         addSubview(statusTextField)
-        addSubview(statusButton)
+        addSubview(setStatusButton)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let avatarView: UIImageView = {
+    let avatarImageView: UIImageView = {
         var avatar = UIImageView(image: UIImage(named: "cat"))
         avatar.contentMode = .scaleAspectFill
         avatar.layer.cornerRadius = 70/2
@@ -32,7 +32,7 @@ class ProfileHeaderView: UIView {
         return avatar
     }()
     
-    let nameLabel: UILabel = {
+    let fullNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Hipster Cat"
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
@@ -64,7 +64,7 @@ class ProfileHeaderView: UIView {
         return textField
     }()
     
-    lazy var statusButton: UIButton = {
+    lazy var setStatusButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 4
@@ -91,10 +91,10 @@ class ProfileHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        avatarView.frame = CGRect(x: 16, y: 16, width: 86, height: 86)
-        nameLabel.frame = CGRect(x: 118, y: 27, width: bounds.width - 16*3 - 86, height: 22)
+        avatarImageView.frame = CGRect(x: 16, y: 16, width: 86, height: 86)
+        fullNameLabel.frame = CGRect(x: 118, y: 27, width: bounds.width - 16*3 - 86, height: 22)
         statusLabel.frame = CGRect(x: 118, y: 53, width: bounds.width - 16*3 - 86, height: 16)
         statusTextField.frame = CGRect(x: 118, y: 73, width: bounds.width - 16*3 - 86, height: 40)
-        statusButton.frame = CGRect(x: 16, y: avatarView.frame.maxY + 16, width: bounds.width - 16*2, height: 50)
+        setStatusButton.frame = CGRect(x: 16, y: avatarImageView.frame.maxY + 16, width: bounds.width - 16*2, height: 50)
     }
 }
