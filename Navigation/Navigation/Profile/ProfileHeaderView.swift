@@ -14,6 +14,7 @@ class ProfileHeaderView: UIView {
         addSubview(avatarView)
         addSubview(nameLabel)
         addSubview(statusLabel)
+        addSubview(statusTextField)
         addSubview(statusButton)
     }
     
@@ -47,11 +48,27 @@ class ProfileHeaderView: UIView {
         return label
     }()
     
+    lazy var statusTextField: UITextField = {
+        var textField = UITextField()
+        textField.text = "Waiting for something..."
+        textField.layer.cornerRadius = 12
+        textField.backgroundColor = .white
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.font = .systemFont(ofSize: 15, weight: .regular)
+        textField.textColor = .black
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+        textField.addTarget(self, action: #selector(statusTextChanged(_:)), for: .editingChanged)
+        return textField
+    }()
+    
     lazy var statusButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 4
-        button.setTitle("Show status", for: .normal)
+        button.setTitle("Set status", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.shadowOffset = CGSize(width: 4, height: 4)
         button.layer.shadowColor = UIColor.black.cgColor
@@ -61,15 +78,23 @@ class ProfileHeaderView: UIView {
         return button
     }()
     
-    @objc func buttonPressed(){
-        print(statusLabel.text!)
+    private var statusText = String()
+    
+    @objc func statusTextChanged(_ textField: UITextField){
+        statusText = textField.text!
     }
+    
+    @objc func buttonPressed(){
+        statusLabel.text = statusText
+    }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        avatarView.frame = CGRect(x: 16, y: 16, width: 80, height: 80)
-        nameLabel.frame = CGRect(x: 112, y: 27, width: bounds.width - 16*3 - 80, height: 22)
-        statusLabel.frame = CGRect(x: 112, y: 58, width: bounds.width - 16*3 - 80, height: 18)
+        avatarView.frame = CGRect(x: 16, y: 16, width: 86, height: 86)
+        nameLabel.frame = CGRect(x: 118, y: 27, width: bounds.width - 16*3 - 86, height: 22)
+        statusLabel.frame = CGRect(x: 118, y: 53, width: bounds.width - 16*3 - 86, height: 16)
+        statusTextField.frame = CGRect(x: 118, y: 73, width: bounds.width - 16*3 - 86, height: 40)
         statusButton.frame = CGRect(x: 16, y: avatarView.frame.maxY + 16, width: bounds.width - 16*2, height: 50)
     }
 }
