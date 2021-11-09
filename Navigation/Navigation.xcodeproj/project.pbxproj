@@ -17,26 +17,7 @@
 		F7B6983A2728270F00C2E919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B698392728270F00C2E919 /* AppDelegate.swift */; };
 		F7B698432728272000C2E919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B698422728272000C2E919 /* Assets.xcassets */; };
 		F7B698462728272000C2E919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B698442728272000C2E919 /* LaunchScreen.storyboard */; };
-		F7B698512728272100C2E919 /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B698502728272100C2E919 /* NavigationTests.swift */; };
-		F7B6985C2728272100C2E919 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6985B2728272100C2E919 /* NavigationUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F7B6984D2728272100C2E919 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7B6982E2728270F00C2E919 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7B698352728270F00C2E919;
-			remoteInfo = Navigation;
-		};
-		F7B698582728272100C2E919 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7B6982E2728270F00C2E919 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7B698352728270F00C2E919;
-			remoteInfo = Navigation;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F76617E2272A181D00B3050A /* FeedNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavVC.swift; sourceTree = "<group>"; };
@@ -51,30 +32,10 @@
 		F7B698422728272000C2E919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B698452728272000C2E919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B698472728272000C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7B6984C2728272100C2E919 /* NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B698502728272100C2E919 /* NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
-		F7B698522728272100C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7B698572728272100C2E919 /* NavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B6985B2728272100C2E919 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
-		F7B6985D2728272100C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F7B698332728270F00C2E919 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7B698492728272100C2E919 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7B698542728272100C2E919 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				F7B698382728270F00C2E919 /* Navigation */,
-				F7B6984F2728272100C2E919 /* NavigationTests */,
-				F7B6985A2728272100C2E919 /* NavigationUITests */,
 				F7B698372728270F00C2E919 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				F7B698362728270F00C2E919 /* Navigation.app */,
-				F7B6984C2728272100C2E919 /* NavigationTests.xctest */,
-				F7B698572728272100C2E919 /* NavigationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,24 +79,6 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		F7B6984F2728272100C2E919 /* NavigationTests */ = {
-			isa = PBXGroup;
-			children = (
-				F7B698502728272100C2E919 /* NavigationTests.swift */,
-				F7B698522728272100C2E919 /* Info.plist */,
-			);
-			path = NavigationTests;
-			sourceTree = "<group>";
-		};
-		F7B6985A2728272100C2E919 /* NavigationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F7B6985B2728272100C2E919 /* NavigationUITests.swift */,
-				F7B6985D2728272100C2E919 /* Info.plist */,
-			);
-			path = NavigationUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,42 +99,6 @@
 			productReference = F7B698362728270F00C2E919 /* Navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7B6984B2728272100C2E919 /* NavigationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7B698632728272100C2E919 /* Build configuration list for PBXNativeTarget "NavigationTests" */;
-			buildPhases = (
-				F7B698482728272100C2E919 /* Sources */,
-				F7B698492728272100C2E919 /* Frameworks */,
-				F7B6984A2728272100C2E919 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7B6984E2728272100C2E919 /* PBXTargetDependency */,
-			);
-			name = NavigationTests;
-			productName = NavigationTests;
-			productReference = F7B6984C2728272100C2E919 /* NavigationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F7B698562728272100C2E919 /* NavigationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7B698662728272100C2E919 /* Build configuration list for PBXNativeTarget "NavigationUITests" */;
-			buildPhases = (
-				F7B698532728272100C2E919 /* Sources */,
-				F7B698542728272100C2E919 /* Frameworks */,
-				F7B698552728272100C2E919 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7B698592728272100C2E919 /* PBXTargetDependency */,
-			);
-			name = NavigationUITests;
-			productName = NavigationUITests;
-			productReference = F7B698572728272100C2E919 /* NavigationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,14 +110,6 @@
 				TargetAttributes = {
 					F7B698352728270F00C2E919 = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					F7B6984B2728272100C2E919 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = F7B698352728270F00C2E919;
-					};
-					F7B698562728272100C2E919 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = F7B698352728270F00C2E919;
 					};
 				};
 			};
@@ -232,8 +127,6 @@
 			projectRoot = "";
 			targets = (
 				F7B698352728270F00C2E919 /* Navigation */,
-				F7B6984B2728272100C2E919 /* NavigationTests */,
-				F7B698562728272100C2E919 /* NavigationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,20 +138,6 @@
 			files = (
 				F7B698462728272000C2E919 /* LaunchScreen.storyboard in Resources */,
 				F7B698432728272000C2E919 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7B6984A2728272100C2E919 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7B698552728272100C2E919 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,36 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7B698482728272100C2E919 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7B698512728272100C2E919 /* NavigationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7B698532728272100C2E919 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7B6985C2728272100C2E919 /* NavigationUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F7B6984E2728272100C2E919 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7B698352728270F00C2E919 /* Navigation */;
-			targetProxy = F7B6984D2728272100C2E919 /* PBXContainerItemProxy */;
-		};
-		F7B698592728272100C2E919 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7B698352728270F00C2E919 /* Navigation */;
-			targetProxy = F7B698582728272100C2E919 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F7B698442728272000C2E919 /* LaunchScreen.storyboard */ = {
@@ -475,86 +325,6 @@
 			};
 			name = Release;
 		};
-		F7B698642728272100C2E919 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NavigationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alena.NavigationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Navigation.app/Navigation";
-			};
-			name = Debug;
-		};
-		F7B698652728272100C2E919 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NavigationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alena.NavigationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Navigation.app/Navigation";
-			};
-			name = Release;
-		};
-		F7B698672728272100C2E919 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NavigationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alena.NavigationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Navigation;
-			};
-			name = Debug;
-		};
-		F7B698682728272100C2E919 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NavigationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alena.NavigationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Navigation;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,24 +342,6 @@
 			buildConfigurations = (
 				F7B698612728272100C2E919 /* Debug */,
 				F7B698622728272100C2E919 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7B698632728272100C2E919 /* Build configuration list for PBXNativeTarget "NavigationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7B698642728272100C2E919 /* Debug */,
-				F7B698652728272100C2E919 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7B698662728272100C2E919 /* Build configuration list for PBXNativeTarget "NavigationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7B698672728272100C2E919 /* Debug */,
-				F7B698682728272100C2E919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
