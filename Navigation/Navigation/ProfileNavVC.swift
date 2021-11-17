@@ -11,7 +11,7 @@ class ProfileNavVC: UINavigationController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        viewControllers = [ProfileVC()]
+        viewControllers = [ProfileViewController()]
         tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
     }
     
