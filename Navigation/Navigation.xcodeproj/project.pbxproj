@@ -19,6 +19,7 @@
 		F7B6983A2728270F00C2E919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B698392728270F00C2E919 /* AppDelegate.swift */; };
 		F7B698432728272000C2E919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B698422728272000C2E919 /* Assets.xcassets */; };
 		F7B698462728272000C2E919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B698442728272000C2E919 /* LaunchScreen.storyboard */; };
+		F7D68D412745BF0100FA0D69 /* UIKit + Extension Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F7B698422728272000C2E919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B698452728272000C2E919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B698472728272000C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension Swift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +89,19 @@
 				F76617FE272A27F000B3050A /* Post.swift */,
 				F7661806272B59E000B3050A /* InfoVC.swift */,
 				F7B698422728272000C2E919 /* Assets.xcassets */,
+				F7D68D3F2745BE1300FA0D69 /* Extension UIView */,
 				F7B698442728272000C2E919 /* LaunchScreen.storyboard */,
 				F7B698472728272000C2E919 /* Info.plist */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F7D68D3F2745BE1300FA0D69 /* Extension UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */,
+			);
+			path = "Extension UIView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F76617F7272A204700B3050A /* PostVC.swift in Sources */,
+				F7D68D412745BF0100FA0D69 /* UIKit + Extension Swift.swift in Sources */,
 				F76617F2272A1C9900B3050A /* ProfileVC.swift in Sources */,
 				F76618152733FE1F00B3050A /* ProfileViewController.swift in Sources */,
 				F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */,

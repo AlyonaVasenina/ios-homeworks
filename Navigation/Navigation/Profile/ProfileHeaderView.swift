@@ -11,11 +11,7 @@ class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(avatarImageView)
-        addSubview(fullNameLabel)
-        addSubview(statusLabel)
-        addSubview(statusTextField)
-        addSubview(setStatusButton)
+        addSubviews(avatarImageView, fullNameLabel, statusLabel, statusTextField, setStatusButton)
     }
     
     required init?(coder: NSCoder) {
@@ -81,7 +77,7 @@ class ProfileHeaderView: UIView {
     private var statusText = String()
     
     @objc func statusTextChanged(_ textField: UITextField){
-        statusText = textField.text!
+        statusText = textField.text ?? ""
     }
     
     @objc func buttonPressed(){
