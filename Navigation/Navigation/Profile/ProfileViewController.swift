@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
     var botomButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
-        button.title(for: .normal)
+        button.setTitle("Button", for: .normal)
         return button
     }()
     
