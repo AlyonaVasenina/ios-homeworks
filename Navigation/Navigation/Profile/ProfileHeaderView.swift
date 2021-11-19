@@ -127,9 +127,4 @@ class ProfileHeaderView: UIView {
 
         ])
     }
-    
- /*   override func layoutSubviews() {
-        super.layoutSubviews()
-        statusTextField.frame = CGRect(x: 118, y: 73, width: bounds.width - 16*3 - 86, height: 40)
-    } */
 }

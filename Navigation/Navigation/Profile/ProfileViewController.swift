@@ -24,10 +24,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         view.addSubview(profileHV)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        profileHV.frame = view.safeAreaLayoutGuide.layoutFrame
+        
+        profileHV.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            profileHV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            profileHV.leftAnchor.constraint(equalTo: view.leftAnchor),
+            profileHV.rightAnchor.constraint(equalTo: view.rightAnchor),
+            profileHV.heightAnchor.constraint(equalToConstant: 220)
+        ])
     }
 }
