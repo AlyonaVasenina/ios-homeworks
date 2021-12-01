@@ -11,8 +11,9 @@ class ProfileNavVC: UINavigationController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        viewControllers = [ProfileViewController()]
+        viewControllers = [LogInViewController()]
         tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
+        navigationBar.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {

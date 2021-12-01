@@ -21,6 +21,7 @@
 		F7B698462728272000C2E919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B698442728272000C2E919 /* LaunchScreen.storyboard */; };
 		F7D68D412745BF0100FA0D69 /* UIKit + Extension Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */; };
 		F7D68D442745C1D100FA0D69 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */; };
+		F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F352192755A388007126BF /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F7B698472728272000C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension Swift.swift"; sourceTree = "<group>"; };
 		F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		F7F352192755A388007126BF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F766180F2733FDF500B3050A /* OldProfileHeaderView.swift */,
 				F76618142733FE1F00B3050A /* ProfileViewController.swift */,
 				F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */,
+				F7F352192755A388007126BF /* LogInViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				F76618152733FE1F00B3050A /* ProfileViewController.swift in Sources */,
 				F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */,
 				F76617E8272A1A9200B3050A /* ProfileNavVC.swift in Sources */,
+				F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */,
 				F76618102733FDF500B3050A /* OldProfileHeaderView.swift in Sources */,
 				F7D68D442745C1D100FA0D69 /* ProfileHeaderView.swift in Sources */,
 				F7661807272B59E000B3050A /* InfoVC.swift in Sources */,
