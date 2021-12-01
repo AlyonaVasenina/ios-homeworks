@@ -2,17 +2,16 @@
 //  ProfileHeaderView.swift
 //  Navigation
 //
-//  Created by Alena Vasenina on 18.11.2021.
+//  Created by Alena Vasenina on 04.11.2021.
 //
 
 import UIKit
 
-class ProfileHeaderView: UIView {
+class OldProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews(avatarImageView, fullNameLabel, statusLabel, statusTextField, setStatusButton)
-        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -22,7 +21,7 @@ class ProfileHeaderView: UIView {
     let avatarImageView: UIImageView = {
         var avatar = UIImageView(image: UIImage(named: "cat"))
         avatar.contentMode = .scaleAspectFill
-        avatar.layer.cornerRadius = 86/2
+        avatar.layer.cornerRadius = 70/2
         avatar.layer.masksToBounds = true
         avatar.layer.borderColor = UIColor.white.cgColor
         avatar.layer.borderWidth = 3
@@ -54,7 +53,6 @@ class ProfileHeaderView: UIView {
         textField.layer.borderColor = UIColor.black.cgColor
         textField.font = .systemFont(ofSize: 15, weight: .regular)
         textField.textColor = .black
-        
         let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -86,45 +84,13 @@ class ProfileHeaderView: UIView {
         statusLabel.text = statusText
     }
     
-    func setupConstraints(){
-        
-        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
-            avatarImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 86),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 86),
-        ])
-        
-        fullNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            fullNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 27),
-            fullNameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 16),
-            fullNameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-        ])
-        
-        statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            statusLabel.leftAnchor.constraint(equalTo: fullNameLabel.leftAnchor),
-            statusLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            statusLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: -18),
-        ])
-        
-        statusTextField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            statusTextField.leftAnchor.constraint(equalTo: statusLabel.leftAnchor),
-            statusTextField.rightAnchor.constraint(equalTo: statusLabel.rightAnchor),
-            statusTextField.heightAnchor.constraint(equalToConstant: 40),
-            statusTextField.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 6),
-        ])
-        
-        setStatusButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            setStatusButton.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 34),
-            setStatusButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            setStatusButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-            setStatusButton.heightAnchor.constraint(equalToConstant: 50),
-
-        ])
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        avatarImageView.frame = CGRect(x: 16, y: 16, width: 86, height: 86)
+        fullNameLabel.frame = CGRect(x: 118, y: 27, width: bounds.width - 16*3 - 86, height: 22)
+        statusLabel.frame = CGRect(x: 118, y: 53, width: bounds.width - 16*3 - 86, height: 16)
+        statusTextField.frame = CGRect(x: 118, y: 73, width: bounds.width - 16*3 - 86, height: 40)
+        setStatusButton.frame = CGRect(x: 16, y: avatarImageView.frame.maxY + 16, width: bounds.width - 16*2, height: 50)
     }
 }

@@ -20,14 +20,35 @@ class ProfileViewController: UIViewController {
     
     let profileHV = ProfileHeaderView()
     
+    var botomButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .blue
+        button.setTitle("Button", for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
-        view.addSubview(profileHV)
+        view.addSubviews(profileHV, botomButton)
+    
+        profileHV.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            profileHV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            profileHV.leftAnchor.constraint(equalTo: view.leftAnchor),
+            profileHV.rightAnchor.constraint(equalTo: view.rightAnchor),
+            profileHV.heightAnchor.constraint(equalToConstant: 220),
+        ])
+        
+        botomButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            botomButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            botomButton.leftAnchor.constraint(equalTo: view.leftAnchor),
+            botomButton.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
+        
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        profileHV.frame = view.safeAreaLayoutGuide.layoutFrame
-    }
 }
