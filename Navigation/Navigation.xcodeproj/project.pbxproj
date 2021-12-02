@@ -23,6 +23,7 @@
 		F7D68D442745C1D100FA0D69 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */; };
 		F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F352192755A388007126BF /* LogInViewController.swift */; };
 		F7F3522127581FFC007126BF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3522027581FFC007126BF /* LogInView.swift */; };
+		F7F3522927584CB2007126BF /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3522827584CB2007126BF /* PaddedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F7F352192755A388007126BF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F7F3522027581FFC007126BF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		F7F3522827584CB2007126BF /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				F76617FE272A27F000B3050A /* Post.swift */,
 				F7661806272B59E000B3050A /* InfoVC.swift */,
 				F7B698422728272000C2E919 /* Assets.xcassets */,
+				F7F3522727584C3E007126BF /* Helper Views */,
 				F7D68D3F2745BE1300FA0D69 /* Extension UIView */,
 				F7B698442728272000C2E919 /* LaunchScreen.storyboard */,
 				F7B698472728272000C2E919 /* Info.plist */,
@@ -111,6 +114,14 @@
 				F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */,
 			);
 			path = "Extension UIView";
+			sourceTree = "<group>";
+		};
+		F7F3522727584C3E007126BF /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7F3522827584CB2007126BF /* PaddedTextField.swift */,
+			);
+			path = "Helper Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				F76618152733FE1F00B3050A /* ProfileViewController.swift in Sources */,
 				F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */,
 				F76617E8272A1A9200B3050A /* ProfileNavVC.swift in Sources */,
+				F7F3522927584CB2007126BF /* PaddedTextField.swift in Sources */,
 				F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */,
 				F76618102733FDF500B3050A /* OldProfileHeaderView.swift in Sources */,
 				F7F3522127581FFC007126BF /* LogInView.swift in Sources */,
