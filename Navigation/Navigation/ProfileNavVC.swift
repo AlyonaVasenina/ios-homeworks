@@ -20,5 +20,4 @@ class ProfileNavVC: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
 }

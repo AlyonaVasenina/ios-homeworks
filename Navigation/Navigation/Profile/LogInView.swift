@@ -73,10 +73,6 @@ class LogInView: UIView {
         return password
     }()
     
-    @objc func tapReturn(sender: UIControl) {
-        sender.resignFirstResponder()
-    }
-    
     lazy var buttonLogIn: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
@@ -84,8 +80,19 @@ class LogInView: UIView {
         button.setBackgroundImage(UIImage(named:"blue_pixel"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(onTapLogIn), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tapReturn(sender: UIControl) {
+        sender.resignFirstResponder()
+    }
+    
+    @objc func onTapLogIn() {
+        tapLoginHandler?()
+    }
+    
+    var tapLoginHandler: (() -> Void)?
     
     override func layoutSubviews() {
         scrollView.contentSize = frame.size

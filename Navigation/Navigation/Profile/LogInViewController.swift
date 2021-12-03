@@ -31,6 +31,13 @@ class LogInViewController: UIViewController {
             logInView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             logInView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
         ])
+        
+        logInView.tapLoginHandler = { [weak self] in self?.showProfile() }
+    }
+    
+    func showProfile() {
+        let profileVC = ProfileViewController()
+        navigationController?.pushViewController(profileVC, animated: true)
     }
     
 }
