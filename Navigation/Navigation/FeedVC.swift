@@ -55,8 +55,8 @@ class FeedVC: UIViewController {
     }()
     
     @objc func didTapPost() {
-        let postVC = PostVC(post: Post(title: "Post test"))
-        navigationController!.pushViewController(postVC, animated: true)
+      //  var postVC = PostVC(post: Post(title: "Post test"))
+       // navigationController!.pushViewController(postVC, animated: true)
     }
         
 }

@@ -42,7 +42,7 @@ class LogInView: UIView {
     
     private lazy var logInText: UITextField = {
         let logIn = PaddedTextField()
-        logIn.text = "Email or phone"
+        logIn.placeholder = "Email or phone"
         logIn.backgroundColor = .systemGray6
         logIn.layer.borderColor = UIColor.lightGray.cgColor
         logIn.layer.borderWidth = 0.5
@@ -50,7 +50,7 @@ class LogInView: UIView {
         logIn.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         logIn.textColor = .black
         logIn.font = .systemFont(ofSize: 16, weight: .regular)
-        logIn.tintColor = UIColor(named: "accentColor")
+        logIn.tintColor = .accent
         logIn.autocapitalizationType = .none
         logIn.addTarget(self, action: #selector(tapReturn(sender:)), for: .editingDidEndOnExit)
         return logIn
@@ -58,7 +58,7 @@ class LogInView: UIView {
     
     private lazy var passwordText: UITextField = {
         let password = PaddedTextField()
-        password.text = "Password"
+        password.placeholder = "Password"
         password.backgroundColor = .systemGray6
         password.layer.borderColor = UIColor.lightGray.cgColor
         password.layer.borderWidth = 0.5
@@ -66,7 +66,7 @@ class LogInView: UIView {
         password.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         password.textColor = .black
         password.font = .systemFont(ofSize: 16, weight: .regular)
-        password.tintColor = UIColor(named: "accentColor")
+        password.tintColor = .accent
         password.autocapitalizationType = .none
         password.isSecureTextEntry = true
         password.addTarget(self, action: #selector(tapReturn(sender:)), for: .editingDidEndOnExit)
@@ -77,7 +77,7 @@ class LogInView: UIView {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.setBackgroundImage(UIImage(named:"blue_pixel"), for: .normal)
+        button.setBackgroundImage(.bluePixel, for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         button.addTarget(self, action: #selector(onTapLogIn), for: .touchUpInside)

@@ -18,7 +18,9 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let profileHV = ProfileHeaderView()
+    
+    
+    /* let profileHV = ProfileHeaderView()
     
     var botomButton: UIButton = {
         let button = UIButton()
@@ -49,6 +51,6 @@ class ProfileViewController: UIViewController {
             botomButton.rightAnchor.constraint(equalTo: view.rightAnchor),
         ])
         
-    }
+    } */
     
 }
