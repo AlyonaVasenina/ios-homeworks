@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76451A22773D0AC00235E69 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76451A12773D0AC00235E69 /* PostTableViewCell.swift */; };
 		F76617E3272A181D00B3050A /* FeedNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E2272A181D00B3050A /* FeedNavVC.swift */; };
 		F76617E8272A1A9200B3050A /* ProfileNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E7272A1A9200B3050A /* ProfileNavVC.swift */; };
 		F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617EC272A1C8200B3050A /* FeedVC.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F76451A12773D0AC00235E69 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F76617E2272A181D00B3050A /* FeedNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavVC.swift; sourceTree = "<group>"; };
 		F76617E7272A1A9200B3050A /* ProfileNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavVC.swift; sourceTree = "<group>"; };
 		F76617EC272A1C8200B3050A /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				F76617F1272A1C9900B3050A /* ProfileVC.swift */,
 				F76617E2272A181D00B3050A /* FeedNavVC.swift */,
 				F76617EC272A1C8200B3050A /* FeedVC.swift */,
+				F76451A12773D0AC00235E69 /* PostTableViewCell.swift */,
 				F76617F6272A204700B3050A /* PostVC.swift */,
 				F76617FE272A27F000B3050A /* Post.swift */,
 				F7661806272B59E000B3050A /* InfoVC.swift */,
@@ -216,6 +219,7 @@
 				F76617E3272A181D00B3050A /* FeedNavVC.swift in Sources */,
 				F76617FF272A27F000B3050A /* Post.swift in Sources */,
 				F7B6983A2728270F00C2E919 /* AppDelegate.swift in Sources */,
+				F76451A22773D0AC00235E69 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

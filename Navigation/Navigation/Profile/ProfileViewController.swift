@@ -18,39 +18,51 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-    /* let profileHV = ProfileHeaderView()
-    
-    var botomButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .blue
-        button.setTitle("Button", for: .normal)
-        return button
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
+        return tableView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
-        view.addSubviews(profileHV, botomButton)
-    
-        profileHV.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            profileHV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            profileHV.leftAnchor.constraint(equalTo: view.leftAnchor),
-            profileHV.rightAnchor.constraint(equalTo: view.rightAnchor),
-            profileHV.heightAnchor.constraint(equalToConstant: 220),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-        botomButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            botomButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            botomButton.leftAnchor.constraint(equalTo: view.leftAnchor),
-            botomButton.rightAnchor.constraint(equalTo: view.rightAnchor),
-        ])
-        
-    } */
+    }
     
+    var model: [Post] = Post.testPosts
 }
+
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return model.count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
+        cell.textLabel?.text = model[indexPath.row].title
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        ProfileHeaderView()
+    }
+    func tableView(_: UITableView, estimatedHeightForHeaderInSection: Int) -> CGFloat {
+        170
+    }
+}
+

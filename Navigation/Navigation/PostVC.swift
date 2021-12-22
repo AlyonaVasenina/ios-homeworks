@@ -15,8 +15,8 @@ class PostVC: UIViewController {
         self.post = post
         super.init(nibName: nil, bundle: nil)
         title = post.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain,
-                                                            target: self, action: #selector(didTabInfo))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"),
+                                                            style: .plain, target: self, action: #selector(didTabInfo))
         view.backgroundColor = .red
     }
     
