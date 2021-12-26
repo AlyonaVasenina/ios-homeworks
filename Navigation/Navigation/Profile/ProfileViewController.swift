@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     }
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
@@ -54,7 +54,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
-        cell.textLabel?.text = model[indexPath.row].title
+        cell.post = model[indexPath.row]
         return cell
     }
     

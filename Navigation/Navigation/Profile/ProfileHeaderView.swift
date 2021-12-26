@@ -47,7 +47,7 @@ class ProfileHeaderView: UIView {
     
     lazy var statusTextField: UITextField = {
         var textField = UITextField()
-        textField.text = "Waiting for something..."
+        textField.placeholder = "Waiting for something..."
         textField.layer.cornerRadius = 12
         textField.backgroundColor = .white
         textField.layer.borderWidth = 1
