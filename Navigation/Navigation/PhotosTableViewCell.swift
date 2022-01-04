@@ -31,7 +31,7 @@ class PhotosTableViewCell: UITableViewCell {
         let button = UIButton()
         button.tintColor = .black
         button.setImage(UIImage(systemName: "arrow.forward"), for: .normal)
-        button.addTarget(self, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        button.addTarget(self, action: #selector(didTapPhotoGallery), for: .touchUpInside)
         return button
     }()
     
@@ -43,6 +43,10 @@ class PhotosTableViewCell: UITableViewCell {
         stack.spacing = 8
         return stack
     }()
+    
+    @objc func didTapPhotoGallery() { onTapSeeMore?() }
+    
+    var onTapSeeMore: (() -> Void)?
     
     func makeImageView(imageName: String) -> UIImageView {
         let photos = UIImageView(image: UIImage(named: imageName))

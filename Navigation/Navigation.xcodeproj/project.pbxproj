@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F76451A22773D0AC00235E69 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76451A12773D0AC00235E69 /* PostTableViewCell.swift */; };
 		F76451A42783AC5900235E69 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76451A32783AC5900235E69 /* PhotosTableViewCell.swift */; };
+		F76451A82783D09100235E69 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76451A72783D09100235E69 /* PhotosViewController.swift */; };
 		F76617E3272A181D00B3050A /* FeedNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E2272A181D00B3050A /* FeedNavVC.swift */; };
 		F76617E8272A1A9200B3050A /* ProfileNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E7272A1A9200B3050A /* ProfileNavVC.swift */; };
 		F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617EC272A1C8200B3050A /* FeedVC.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		F76451A12773D0AC00235E69 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F76451A32783AC5900235E69 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		F76451A72783D09100235E69 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F76617E2272A181D00B3050A /* FeedNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavVC.swift; sourceTree = "<group>"; };
 		F76617E7272A1A9200B3050A /* ProfileNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavVC.swift; sourceTree = "<group>"; };
 		F76617EC272A1C8200B3050A /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F76617FE272A27F000B3050A /* Post.swift */,
 				F7661806272B59E000B3050A /* InfoVC.swift */,
 				F76451A32783AC5900235E69 /* PhotosTableViewCell.swift */,
+				F76451A72783D09100235E69 /* PhotosViewController.swift */,
 				F7B698422728272000C2E919 /* Assets.xcassets */,
 				F7F3522727584C3E007126BF /* Helper Views */,
 				F7D68D3F2745BE1300FA0D69 /* Extension UIView */,
@@ -214,6 +217,7 @@
 				F7F3522927584CB2007126BF /* PaddedTextField.swift in Sources */,
 				F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */,
 				F76451A42783AC5900235E69 /* PhotosTableViewCell.swift in Sources */,
+				F76451A82783D09100235E69 /* PhotosViewController.swift in Sources */,
 				F76618102733FDF500B3050A /* OldProfileHeaderView.swift in Sources */,
 				F786C98F276FDB940019A163 /* UIColor+Extension.swift in Sources */,
 				F7F3522127581FFC007126BF /* LogInView.swift in Sources */,

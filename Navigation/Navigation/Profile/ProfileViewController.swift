@@ -58,6 +58,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
      //   cell.post = model[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotosTableViewCell", for: indexPath) as! PhotosTableViewCell
+        cell.onTapSeeMore = { [weak self] in self?.showPhotoGallery() }
         return cell
     }
     
@@ -66,6 +67,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_: UITableView, estimatedHeightForHeaderInSection: Int) -> CGFloat {
         170
+    }
+    
+    private func showPhotoGallery() {
+        let photoVC = PhotosViewController()
+        navigationController!.pushViewController(photoVC, animated: true)
     }
 }
 
