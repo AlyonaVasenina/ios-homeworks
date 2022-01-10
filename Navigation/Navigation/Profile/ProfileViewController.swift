@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         title = "Profile"
+        navigationItem.backButtonTitle = "Back"
     }
     
     required init?(coder: NSCoder) {
