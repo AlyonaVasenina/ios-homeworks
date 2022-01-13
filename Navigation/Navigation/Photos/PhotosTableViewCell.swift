@@ -59,21 +59,18 @@ class PhotosTableViewCell: UITableViewCell {
     
     func setupConstrains() {
         
-        titlePhotosLabel.translatesAutoresizingMaskIntoConstraints = false
+        titlePhotosLabel.toAutoLayout()
+        seeMoreButton.toAutoLayout()
+        stackView.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             titlePhotosLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             titlePhotosLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
             titlePhotosLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-        ])
         
-        seeMoreButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             seeMoreButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
             seeMoreButton.centerYAnchor.constraint(equalTo: titlePhotosLabel.centerYAnchor),
-        ])
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: titlePhotosLabel.bottomAnchor, constant: 12),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),

@@ -18,6 +18,8 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var model: [String] = UIImage.photos
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let size = (UIScreen.main.bounds.width - 4*8)/3
@@ -34,8 +36,13 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
-       
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        setupConstraints()
+            
+    }
+    
+    func setupConstraints() {
+        
+        collectionView.toAutoLayout()
         
         [
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -43,13 +50,10 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
         ]
-        
             .forEach {
                 $0.isActive = true
             }
     }
-    
-    var model: [String] = UIImage.photos
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

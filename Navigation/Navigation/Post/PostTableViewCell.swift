@@ -78,30 +78,25 @@ class PostTableViewCell: UITableViewCell {
     
     func setupConstraints() {
         
-        titlePostLabel.translatesAutoresizingMaskIntoConstraints = false
+        titlePostLabel.toAutoLayout()
+        imagePostView.toAutoLayout()
+        textPostLabel.toAutoLayout()
+        stackView.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             titlePostLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             titlePostLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
             titlePostLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
-        ])
         
-        imagePostView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             imagePostView.topAnchor.constraint(equalTo: titlePostLabel.bottomAnchor, constant: 12),
             imagePostView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             imagePostView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             imagePostView.heightAnchor.constraint(equalTo: imagePostView.widthAnchor),
-        ])
         
-        textPostLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             textPostLabel.topAnchor.constraint(equalTo: imagePostView.bottomAnchor, constant: 16),
             textPostLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
-            textPostLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -16)
-        ])
+            textPostLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -16),
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: textPostLabel.bottomAnchor, constant: 16),
             stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
             stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -16),

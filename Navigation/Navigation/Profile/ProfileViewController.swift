@@ -19,6 +19,8 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var model: [Post] = Post.testPosts
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
@@ -31,8 +33,13 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        setupConstraints()
+    }
+    
+    func setupConstraints(){
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
@@ -40,8 +47,6 @@ class ProfileViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
-    var model: [Post] = Post.testPosts
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {

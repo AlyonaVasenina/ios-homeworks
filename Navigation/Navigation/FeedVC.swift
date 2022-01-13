@@ -21,13 +21,7 @@ class FeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubviews(stackView)
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.widthAnchor.constraint(equalToConstant: 150)
-        ])
+        setupConstraints()
     }
     
     private lazy var stackView: UIStackView = {
@@ -58,6 +52,16 @@ class FeedVC: UIViewController {
         let postVC = PostVC(post: Post.test1)
         navigationController!.pushViewController(postVC, animated: true)
     }
+    
+    func setupConstraints() {
         
+        stackView.toAutoLayout()
+        
+        NSLayoutConstraint.activate([
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.widthAnchor.constraint(equalToConstant: 150)
+        ])
+    }
 }
 
