@@ -47,7 +47,7 @@ class ProfileHeaderView: UIView {
     
     lazy var statusTextField: UITextField = {
         var textField = UITextField()
-        textField.text = "Waiting for something..."
+        textField.placeholder = "Waiting for something..."
         textField.layer.cornerRadius = 12
         textField.backgroundColor = .white
         textField.layer.borderWidth = 1
@@ -124,7 +124,7 @@ class ProfileHeaderView: UIView {
             setStatusButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
             setStatusButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
             setStatusButton.heightAnchor.constraint(equalToConstant: 50),
-
+            setStatusButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
 }

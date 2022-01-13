@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76451A22773D0AC00235E69 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76451A12773D0AC00235E69 /* PostTableViewCell.swift */; };
 		F76617E3272A181D00B3050A /* FeedNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E2272A181D00B3050A /* FeedNavVC.swift */; };
 		F76617E8272A1A9200B3050A /* ProfileNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617E7272A1A9200B3050A /* ProfileNavVC.swift */; };
 		F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76617EC272A1C8200B3050A /* FeedVC.swift */; };
@@ -16,10 +17,12 @@
 		F7661807272B59E000B3050A /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7661806272B59E000B3050A /* InfoVC.swift */; };
 		F76618102733FDF500B3050A /* OldProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F766180F2733FDF500B3050A /* OldProfileHeaderView.swift */; };
 		F76618152733FE1F00B3050A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76618142733FE1F00B3050A /* ProfileViewController.swift */; };
+		F786C98F276FDB940019A163 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F786C98E276FDB940019A163 /* UIColor+Extension.swift */; };
+		F786C992276FDD410019A163 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F786C991276FDD410019A163 /* UIImage+Extension.swift */; };
 		F7B6983A2728270F00C2E919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B698392728270F00C2E919 /* AppDelegate.swift */; };
 		F7B698432728272000C2E919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B698422728272000C2E919 /* Assets.xcassets */; };
 		F7B698462728272000C2E919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B698442728272000C2E919 /* LaunchScreen.storyboard */; };
-		F7D68D412745BF0100FA0D69 /* UIKit + Extension Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */; };
+		F7D68D412745BF0100FA0D69 /* UIKit+Extension Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D402745BF0100FA0D69 /* UIKit+Extension Swift.swift */; };
 		F7D68D442745C1D100FA0D69 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */; };
 		F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F352192755A388007126BF /* LogInViewController.swift */; };
 		F7F3522127581FFC007126BF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3522027581FFC007126BF /* LogInView.swift */; };
@@ -27,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F76451A12773D0AC00235E69 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F76617E2272A181D00B3050A /* FeedNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavVC.swift; sourceTree = "<group>"; };
 		F76617E7272A1A9200B3050A /* ProfileNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavVC.swift; sourceTree = "<group>"; };
 		F76617EC272A1C8200B3050A /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -36,12 +40,14 @@
 		F7661806272B59E000B3050A /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		F766180F2733FDF500B3050A /* OldProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldProfileHeaderView.swift; sourceTree = "<group>"; };
 		F76618142733FE1F00B3050A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F786C98E276FDB940019A163 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F786C991276FDD410019A163 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F7B698362728270F00C2E919 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B698392728270F00C2E919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7B698422728272000C2E919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B698452728272000C2E919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B698472728272000C2E919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension Swift.swift"; sourceTree = "<group>"; };
+		F7D68D402745BF0100FA0D69 /* UIKit+Extension Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension Swift.swift"; sourceTree = "<group>"; };
 		F7D68D432745C1D100FA0D69 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F7F352192755A388007126BF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F7F3522027581FFC007126BF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 				F76617F1272A1C9900B3050A /* ProfileVC.swift */,
 				F76617E2272A181D00B3050A /* FeedNavVC.swift */,
 				F76617EC272A1C8200B3050A /* FeedVC.swift */,
+				F76451A12773D0AC00235E69 /* PostTableViewCell.swift */,
 				F76617F6272A204700B3050A /* PostVC.swift */,
 				F76617FE272A27F000B3050A /* Post.swift */,
 				F7661806272B59E000B3050A /* InfoVC.swift */,
@@ -111,7 +118,9 @@
 		F7D68D3F2745BE1300FA0D69 /* Extension UIView */ = {
 			isa = PBXGroup;
 			children = (
-				F7D68D402745BF0100FA0D69 /* UIKit + Extension Swift.swift */,
+				F7D68D402745BF0100FA0D69 /* UIKit+Extension Swift.swift */,
+				F786C98E276FDB940019A163 /* UIColor+Extension.swift */,
+				F786C991276FDD410019A163 /* UIImage+Extension.swift */,
 			);
 			path = "Extension UIView";
 			sourceTree = "<group>";
@@ -194,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F76617F7272A204700B3050A /* PostVC.swift in Sources */,
-				F7D68D412745BF0100FA0D69 /* UIKit + Extension Swift.swift in Sources */,
+				F7D68D412745BF0100FA0D69 /* UIKit+Extension Swift.swift in Sources */,
 				F76617F2272A1C9900B3050A /* ProfileVC.swift in Sources */,
 				F76618152733FE1F00B3050A /* ProfileViewController.swift in Sources */,
 				F76617ED272A1C8200B3050A /* FeedVC.swift in Sources */,
@@ -202,12 +211,15 @@
 				F7F3522927584CB2007126BF /* PaddedTextField.swift in Sources */,
 				F7F3521A2755A388007126BF /* LogInViewController.swift in Sources */,
 				F76618102733FDF500B3050A /* OldProfileHeaderView.swift in Sources */,
+				F786C98F276FDB940019A163 /* UIColor+Extension.swift in Sources */,
 				F7F3522127581FFC007126BF /* LogInView.swift in Sources */,
 				F7D68D442745C1D100FA0D69 /* ProfileHeaderView.swift in Sources */,
+				F786C992276FDD410019A163 /* UIImage+Extension.swift in Sources */,
 				F7661807272B59E000B3050A /* InfoVC.swift in Sources */,
 				F76617E3272A181D00B3050A /* FeedNavVC.swift in Sources */,
 				F76617FF272A27F000B3050A /* Post.swift in Sources */,
 				F7B6983A2728270F00C2E919 /* AppDelegate.swift in Sources */,
+				F76451A22773D0AC00235E69 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
