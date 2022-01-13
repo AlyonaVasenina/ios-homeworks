@@ -37,7 +37,6 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         view.addSubview(collectionView)
         setupConstraints()
-            
     }
     
     func setupConstraints() {
@@ -74,7 +73,8 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as!  PhotosCollectionViewCell
+        cell.model = model[indexPath.item]
         return cell
     }
     
