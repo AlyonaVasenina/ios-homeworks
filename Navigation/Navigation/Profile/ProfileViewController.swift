@@ -32,26 +32,57 @@ class ProfileViewController: UIViewController {
     
     lazy var gesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
     
+    lazy var coverView: UIView = {
+        let cover = UIView()
+        cover.isHidden = true
+        cover.backgroundColor = .white.withAlphaComponent(0.9)
+        cover.addSubview(closeButton)
+        return cover
+    }()
+    
+    lazy var closeButton: UIButton = {
+        let button = UIButton()
+        button.tintColor = .black
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
+        button.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
+        view.addSubviews(tableView, coverView)
         setupConstraints()
     }
     
     func setupConstraints(){
         
         tableView.toAutoLayout()
+        coverView.toAutoLayout()
+        closeButton.toAutoLayout()
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            coverView.topAnchor.constraint(equalTo: view.topAnchor),
+            coverView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            coverView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            coverView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            closeButton.trailingAnchor.constraint(equalTo: coverView.trailingAnchor, constant: -16),
         ])
     }
     
     @objc private func handleTapGesture (gesture: UITapGestureRecognizer) {
         print("tap location: \(gesture.location(in: self.view)), state: \(gesture.state.rawValue)")
+        coverView.isHidden = false
+    }
+    
+    @objc private func closeButtonPressed() {
+        coverView.isHidden = true
     }
 }
 
@@ -83,6 +114,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         header.avatarImageView.isUserInteractionEnabled = true
         return header
     }
+    
     func tableView(_: UITableView, estimatedHeightForHeaderInSection: Int) -> CGFloat {
         170
     }
