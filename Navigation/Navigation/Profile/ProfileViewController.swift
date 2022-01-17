@@ -30,6 +30,8 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
+    lazy var gesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
@@ -46,6 +48,10 @@ class ProfileViewController: UIViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    @objc private func handleTapGesture (gesture: UITapGestureRecognizer) {
+        print("tap location: \(gesture.location(in: self.view)), state: \(gesture.state.rawValue)")
     }
 }
 
@@ -72,7 +78,10 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        ProfileHeaderView()
+        let header = ProfileHeaderView()
+        header.avatarImageView.addGestureRecognizer(gesture)
+        header.avatarImageView.isUserInteractionEnabled = true
+        return header
     }
     func tableView(_: UITableView, estimatedHeightForHeaderInSection: Int) -> CGFloat {
         170
