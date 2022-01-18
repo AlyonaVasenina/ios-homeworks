@@ -78,11 +78,19 @@ class ProfileViewController: UIViewController {
     
     @objc private func handleTapGesture (gesture: UITapGestureRecognizer) {
         print("tap location: \(gesture.location(in: self.view)), state: \(gesture.state.rawValue)")
+        coverView.alpha = 0
         coverView.isHidden = false
+        closeButton.alpha = 0
+        UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 1 }, completion: { _ in
+            UIView.animate(withDuration: 0.3, animations: { self.closeButton.alpha = 1 })
+        })
     }
     
     @objc private func closeButtonPressed() {
-        coverView.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: { self.closeButton.alpha = 0 }, completion: { _ in
+            UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 0 }, completion: { _ in self.coverView.isHidden = true })
+            
+        })
     }
 }
 
