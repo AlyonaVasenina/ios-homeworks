@@ -9,18 +9,6 @@ import UIKit
 
 class LogInView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(scrollView)
-        scrollView.addSubviews(logoImageView, stackView, buttonLogIn)
-        setupConstraints()
-        registerForKeyboardNotifications()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
         return scroll
@@ -84,6 +72,20 @@ class LogInView: UIView {
         return button
     }()
     
+    var tapLoginHandler: (() -> Void)?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(scrollView)
+        scrollView.addSubviews(logoImageView, stackView, buttonLogIn)
+        setupConstraints()
+        registerForKeyboardNotifications()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @objc func tapReturn(sender: UIControl) {
         sender.resignFirstResponder()
     }
@@ -91,8 +93,6 @@ class LogInView: UIView {
     @objc func onTapLogIn() {
         tapLoginHandler?()
     }
-    
-    var tapLoginHandler: (() -> Void)?
     
     override func layoutSubviews() {
         scrollView.contentSize = frame.size

@@ -9,17 +9,6 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .white
-        contentView.addSubviews(titlePostLabel, imagePostView, textPostLabel, stackView)
-        setupConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     var post: Post? {
         didSet {
             guard let post = post else { return }
@@ -75,6 +64,17 @@ class PostTableViewCell: UITableViewCell {
         views.textColor = .black
         return views
     }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .white
+        contentView.addSubviews(titlePostLabel, imagePostView, textPostLabel, stackView)
+        setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setupConstraints() {
         

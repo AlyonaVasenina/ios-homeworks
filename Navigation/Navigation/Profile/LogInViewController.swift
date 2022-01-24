@@ -9,6 +9,8 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
+    let logInView = LogInView()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -16,8 +18,6 @@ class LogInViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    let logInView = LogInView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

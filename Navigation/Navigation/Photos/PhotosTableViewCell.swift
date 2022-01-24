@@ -9,15 +9,7 @@ import UIKit
 
 class PhotosTableViewCell: UITableViewCell {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubviews(titlePhotosLabel, seeMoreButton, stackView)
-        setupConstrains()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+ 
     
     private var titlePhotosLabel: UILabel = {
         let title = UILabel()
@@ -44,9 +36,19 @@ class PhotosTableViewCell: UITableViewCell {
         return stack
     }()
     
-    @objc func didTapPhotoGallery() { onTapSeeMore?() }
-    
     var onTapSeeMore: (() -> Void)?
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubviews(titlePhotosLabel, seeMoreButton, stackView)
+        setupConstrains()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func didTapPhotoGallery() { onTapSeeMore?() }
     
     func makeImageView(imageName: String) -> UIImageView {
         let photos = UIImageView(image: UIImage(named: imageName))

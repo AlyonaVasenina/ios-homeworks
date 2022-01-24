@@ -9,16 +9,6 @@ import UIKit
 
 class PhotosCollectionViewCell: UICollectionViewCell {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        contentView.addSubview(imageView)
-        setupConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     var model: String? {
         didSet {
             guard let model = model else { return }
@@ -32,6 +22,16 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         image.clipsToBounds = true
         return image
     }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(imageView)
+        setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setupConstraints() {
          
