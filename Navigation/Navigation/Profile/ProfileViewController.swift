@@ -9,16 +9,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        title = "Profile"
-        navigationItem.backButtonTitle = "Back"
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     var model: [Post] = Post.testPosts
     
     lazy var tableView: UITableView = {
@@ -54,6 +44,18 @@ class ProfileViewController: UIViewController {
         return image
     }()
     
+    var savedFrameAvatar = CGRect.zero
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        title = "Profile"
+        navigationItem.backButtonTitle = "Back"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubviews(tableView, coverView)
@@ -80,13 +82,10 @@ class ProfileViewController: UIViewController {
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             closeButton.trailingAnchor.constraint(equalTo: coverView.trailingAnchor, constant: -16),
             
-           /* avatarView.centerXAnchor.constraint(equalTo: coverView.centerXAnchor),
-            avatarView.centerYAnchor.constraint(equalTo: coverView.centerYAnchor),
-            avatarView.widthAnchor.constraint(equalTo: coverView.widthAnchor),*/
         ])
     }
     
-    var savedFrameAvatar = CGRect.zero
+    
     
     @objc private func handleTapGesture (gesture: UITapGestureRecognizer) {
         print("tap location: \(gesture.location(in: self.view)), state: \(gesture.state.rawValue)")
@@ -99,7 +98,7 @@ class ProfileViewController: UIViewController {
         var height = (coverView.bounds.width * imageSize.height) / imageSize.width
         var y: CGFloat = (coverView.bounds.height / 2.0 - height / 2.0)
         let newFrame = CGRect(x: 0, y: y, width: coverView.bounds.width, height: height)
-        UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 1; self.avatarView.frame = newFrame }, completion: { _ in
+        UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 1; self.avatarView.frame = newFrame; self.avatarView.layer.cornerRadius = 0 }, completion: { _ in
             UIView.animate(withDuration: 0.3, animations: { self.closeButton.alpha = 1 })
         })
     }

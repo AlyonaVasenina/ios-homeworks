@@ -9,15 +9,6 @@ import UIKit
 
 class OldProfileHeaderView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubviews(avatarImageView, fullNameLabel, statusLabel, statusTextField, setStatusButton)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     let avatarImageView: UIImageView = {
         var avatar = UIImageView(image: UIImage(named: "cat"))
         avatar.contentMode = .scaleAspectFill
@@ -76,6 +67,15 @@ class OldProfileHeaderView: UIView {
     
     private var statusText = String()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubviews(avatarImageView, fullNameLabel, statusLabel, statusTextField, setStatusButton)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @objc func statusTextChanged(_ textField: UITextField){
         statusText = textField.text ?? ""
     }
@@ -83,7 +83,6 @@ class OldProfileHeaderView: UIView {
     @objc func buttonPressed(){
         statusLabel.text = statusText
     }
-    
     
     override func layoutSubviews() {
         super.layoutSubviews()
