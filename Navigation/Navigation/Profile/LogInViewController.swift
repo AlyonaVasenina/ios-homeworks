@@ -23,16 +23,20 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubviews(logInView)
+        setupConstraints()
+        logInView.tapLoginHandler = { [weak self] in self?.showProfile() }
+    }
+    
+    func setupConstraints() {
         
-        logInView.translatesAutoresizingMaskIntoConstraints = false
+        logInView.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             logInView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             logInView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             logInView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             logInView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
         ])
-        
-        logInView.tapLoginHandler = { [weak self] in self?.showProfile() }
     }
     
     func showProfile() {

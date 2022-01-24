@@ -88,38 +88,31 @@ class ProfileHeaderView: UIView {
     
     func setupConstraints(){
         
-        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        avatarImageView.toAutoLayout()
+        fullNameLabel.toAutoLayout()
+        statusLabel.toAutoLayout()
+        statusTextField.toAutoLayout()
+        setStatusButton.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             avatarImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
             avatarImageView.heightAnchor.constraint(equalToConstant: 86),
             avatarImageView.widthAnchor.constraint(equalToConstant: 86),
-        ])
         
-        fullNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             fullNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 27),
             fullNameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 16),
             fullNameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-        ])
         
-        statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             statusLabel.leftAnchor.constraint(equalTo: fullNameLabel.leftAnchor),
             statusLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
             statusLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: -18),
-        ])
         
-        statusTextField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             statusTextField.leftAnchor.constraint(equalTo: statusLabel.leftAnchor),
             statusTextField.rightAnchor.constraint(equalTo: statusLabel.rightAnchor),
             statusTextField.heightAnchor.constraint(equalToConstant: 40),
             statusTextField.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 6),
-        ])
         
-        setStatusButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             setStatusButton.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 34),
             setStatusButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
             setStatusButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),

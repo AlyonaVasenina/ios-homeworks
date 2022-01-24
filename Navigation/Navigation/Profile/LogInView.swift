@@ -101,33 +101,28 @@ class LogInView: UIView {
     
     func setupConstraints(){
         
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.toAutoLayout()
+        logoImageView.toAutoLayout()
+        stackView.toAutoLayout()
+        buttonLogIn.toAutoLayout()
+        
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             scrollView.leftAnchor.constraint(equalTo: leftAnchor),
             scrollView.rightAnchor.constraint(equalTo: rightAnchor),
-        ])
         
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 120),
             logoImageView.heightAnchor.constraint(equalToConstant: 100),
             logoImageView.widthAnchor.constraint(equalToConstant: 100),
             logoImageView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-        ])
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+       
             stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 120),
             stackView.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -16),
             stackView.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 16),
             stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 100),
-        ])
         
-        buttonLogIn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
             buttonLogIn.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
             buttonLogIn.rightAnchor.constraint(equalTo: stackView.rightAnchor),
             buttonLogIn.leftAnchor.constraint(equalTo: stackView.leftAnchor),
