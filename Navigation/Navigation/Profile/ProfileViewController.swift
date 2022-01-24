@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
         let cover = UIView()
         cover.isHidden = true
         cover.backgroundColor = .white.withAlphaComponent(0.9)
-        cover.addSubview(closeButton)
+        cover.addSubviews(closeButton, avatarView)
         return cover
     }()
     
@@ -46,6 +46,12 @@ class ProfileViewController: UIViewController {
         button.setImage(UIImage(systemName: "xmark"), for: .normal)
         button.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
         return button
+    }()
+    
+    lazy var avatarView: UIImageView = {
+        let image = UIImageView(image: UIImage(named: "cat"))
+        image.contentMode = .scaleAspectFill
+        return image
     }()
     
     override func viewDidLoad() {
@@ -73,22 +79,34 @@ class ProfileViewController: UIViewController {
             
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             closeButton.trailingAnchor.constraint(equalTo: coverView.trailingAnchor, constant: -16),
+            
+           /* avatarView.centerXAnchor.constraint(equalTo: coverView.centerXAnchor),
+            avatarView.centerYAnchor.constraint(equalTo: coverView.centerYAnchor),
+            avatarView.widthAnchor.constraint(equalTo: coverView.widthAnchor),*/
         ])
     }
+    
+    var savedFrameAvatar = CGRect.zero
     
     @objc private func handleTapGesture (gesture: UITapGestureRecognizer) {
         print("tap location: \(gesture.location(in: self.view)), state: \(gesture.state.rawValue)")
         coverView.alpha = 0
         coverView.isHidden = false
         closeButton.alpha = 0
-        UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 1 }, completion: { _ in
+        avatarView.frame = gesture.view!.convert(gesture.view!.bounds, to: coverView)
+        savedFrameAvatar = avatarView.frame
+        let imageSize = avatarView.image!.size
+        var height = (coverView.bounds.width * imageSize.height) / imageSize.width
+        var y: CGFloat = (coverView.bounds.height / 2.0 - height / 2.0)
+        let newFrame = CGRect(x: 0, y: y, width: coverView.bounds.width, height: height)
+        UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 1; self.avatarView.frame = newFrame }, completion: { _ in
             UIView.animate(withDuration: 0.3, animations: { self.closeButton.alpha = 1 })
         })
     }
     
     @objc private func closeButtonPressed() {
         UIView.animate(withDuration: 0.3, animations: { self.closeButton.alpha = 0 }, completion: { _ in
-            UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 0 }, completion: { _ in self.coverView.isHidden = true })
+            UIView.animate(withDuration: 0.5, animations: { self.coverView.alpha = 0; self.avatarView.frame = self.savedFrameAvatar}, completion: { _ in self.coverView.isHidden = true })
             
         })
     }
